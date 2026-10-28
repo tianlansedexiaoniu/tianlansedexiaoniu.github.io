@@ -27,6 +27,12 @@
 <button onclick="doPull()" style="width:230px;height:40px;font-size:30px;">确定</button>
 </div>
 <div align="center"><font color="red">提示：建议在手机上开启mtp模式进行文件传输，不建议在此程序上传输文件</font></div>
-<script>const $=e=>document.getElementById(e);async function g(){let t=await Adb.open("WebUSB"),d=await t.connectAdb("host::webusb");return{t,d}}function onPushFile(e){e.files[0]&&($("a").value=e.files[0].name)}async function doPush(){let f=$("p").files[0],p=$("b").value.trim();if(!f||!p)return;let{t,d}=await g(),s=await d.sync();await s.push(f,p,0o644);await s.quit();t.close()}async function doPull(){let p=$("d").value.trim();if(!p)return;let{t,d}=await g(),s=await d.sync(),e=await s.pull(p);await s.quit();t.close();let n=$("c").value.trim().split(/[\\/]/).pop()||p.split("/").pop(),b=new Blob([new Uint8Array(e.buffer,e.byteOffset,e.byteLength)],{type:"application/octet-stream"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=n;a.click();URL.revokeObjectURL(a.href)}</script>
+<script>
+const $=e=>document.getElementById(e);
+async function g(){let t=await Adb.open("WebUSB"),d=await t.connectAdb("host::webusb");return{t,d}}
+function onPushFile(e){if(e.files[0])$("a").value=e.files[0].name}
+async function doPush(){let f=$("p").files[0],p=$("b").value.trim();if(!f||!p)return;let{t,d}=await g(),s=await d.sync();await s.push(f,p,0o644);await s.quit();t.close()}
+async function doPull(){let p=$("d").value.trim();if(!p)return;let{t,d}=await g(),s=await d.sync(),e=await s.pull(p);await s.quit();t.close();let v=e instanceof ArrayBuffer?new Uint8Array(e):new Uint8Array(e.buffer,e.byteOffset,e.byteLength);let n=$("c").value.trim().split(/[\/]/).pop()||p.split("/").pop(),b=new Blob([v],{type:"application/octet-stream"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=n;a.click();URL.revokeObjectURL(a.href)}
+</script>
 </body>
 </html>
