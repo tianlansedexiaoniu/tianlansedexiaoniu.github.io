@@ -17,7 +17,6 @@ function but3(){
 alert("使用前需将电脑屏幕手动调亮");
 }
 window.addEventListener("load",function(){
-sessionStorage.removeItem("hasShownPopup");
 if(!sessionStorage.getItem("hasShownPopup")){
 var isEnter=confirm("欢迎使用何昱轩系统工具箱!\n版权归何昱轩所有,未经许可请勿擅自复制,否则需承担相应的法律责任\n如因此软件造成的系统损坏,作者概不负责\n提示:系统组件缺失可能导致无法运行\n如确认请按下是钮,并遵守以上条款,如不同意以上条款,请点击否钮并退出使用本软件。");
 sessionStorage.setItem("hasShownPopup","true");
@@ -25,11 +24,10 @@ if(!isEnter){
 window.close();
 }
 }
-time();
 });
 </script>
 </head>
-<body style="overflow-x:hidden" onload="time()">
+<body style="overflow-x:hidden">
 <table align="right">
 <tr>
 <td><button class="x" onclick="window.close()">×</button>
@@ -66,7 +64,7 @@ time();
 <table>
 <tr>
 <td><p>关于</p></td>
-<td><button onclick="but2()" style="border:none;height:32px;width:32px;background:url(icon/1.png)"></button></a></td>
+<td><button onclick="but2()" style="border:none;height:32px;width:32px;background:url(icon/1.png)"></button></td>
 </tr>
 </table>
 <table align="right">
@@ -183,7 +181,7 @@ time();
 <table align="right">
 <tr>
 <td><p>手电筒</p></td>
-<td><a href="Windows/Torch.html"><button onclick="but3()" style="border:none;height:32px;width:32px;background:url(icon/41.png)"></button></a></td>
+<td><a href="Windows/torch.html"><button onclick="but3()" style="border:none;height:32px;width:32px;background:url(icon/41.png)"></button></a></td>
 </tr>
 </table>
 <table>

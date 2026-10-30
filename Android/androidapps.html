@@ -18,14 +18,14 @@
 <tr>
 <td>系统设置</td>
 <td>
-<a href="" onclick="f=createElement('iframe');f.src='intent://settings/#Intent;action=android.settings.SETTINGS;component=com.android.settings/.Settings;end;';body.appendChild(f);setTimeout(f.remove,200)"><button style="border:none;height:32px;width:32px;background:url(../icon/16.png)"></button>
+<a href="" onclick="event.preventDefault();f=document.createElement('iframe');f.style.display='none';f.src='intent://settings/#Intent;action=android.settings.SETTINGS;component=com.android.settings/.Settings;end;';document.body.appendChild(f);setTimeout(()=>f.remove(),200)"><button style="border:none;height:32px;width:32px;background:url(../icon/16.png)"></button>
 </a>
 </td>
 </tr>
 <tr>
 <td>日历</td>
 <td>
-<a href="" onclick="event.preventDefault();f=document.createElement('iframe');f.style.display='none';f.src='intent://#Intent;action=android.intent.action.MAIN;component=com.android.calendar/.CalendarActivity;end';document.body.appendChild(f);setTimeout(f.remove,200)">
+<a href="" onclick="event.preventDefault();f=document.createElement('iframe');f.style.display='none';f.src='intent://#Intent;action=android.intent.action.MAIN;component=com.android.calendar/.CalendarActivity;end';document.body.appendChild(f);setTimeout(()=>f.remove(),200)">
 <button style="border:none;height:32px;width:32px;background:url(../icon/16.png)"></button>
 </a>
 </td>
@@ -41,7 +41,6 @@
 <tr>
 <td>系统地图</td>
 <td>
-<a href="mailto:">
 <a href="geo:">
 <button style="border:none;height:32px;width:32px;background:url(../icon/43.png)"></button>
 </a>
@@ -60,7 +59,7 @@
 <tr>
 <td>工程师模式</td>
 <td>
-<a href="" onclick="event.preventDefault();f=document.createElement('iframe');f.style.display='none';f.src='intent://#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;component=com.sprd.engineermode/.EngineerModeActivity;end';document.body.appendChild(f);setTimeout(f.remove,200)">
+<a href="" onclick="event.preventDefault();f=document.createElement('iframe');f.style.display='none';f.src='intent://#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;component=com.sprd.engineermode/.EngineerModeActivity;end';document.body.appendChild(f);setTimeout(()=>f.remove(),200)">
 <button style="border:none;height:32px;width:32px;background:url(../icon/43.png)"></button>
 </a>
 </td>
