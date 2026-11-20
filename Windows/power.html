@@ -16,43 +16,43 @@
 <table>
 <tr>
 <td><p>睡眠</p></td>
-<td><button onclick="hyxtoolbox.run('rundll32.exe powrprof.dll,SetSuspendState 0,1,0')"class="ico"style="background:url(../icon/22.png)"></button></td>
+<td><button onclick="hyxtoolbox.run('rundll32 powrprof.dll,SetSuspendState 0,1,0')"class="ico"style="background:url(../icon/22.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>关机</p></td>
-<td><button onclick="hyxtoolbox.run('shutdown.exe /f /s /t 0')"class="ico"style="background:url(../icon/4.png)"></button></td>
+<td><button onclick="hyxtoolbox.run('shutdown /f /s /t 0')"class="ico"style="background:url(../icon/4.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>定时关机</p></td>
-<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;set /p t=Shutdown in seconds: &amp; shutdown /s /t %t%&quot;')"class="ico"style="background:url(../icon/4.png)"></button></td>
+<td><button onclick="hyxtoolbox.run('cmd /k &quot;set /p t=Shutdown in seconds: &amp; shutdown /s /t %t%&quot;')"class="ico"style="background:url(../icon/4.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>重启</p></td>
-<td><button onclick="hyxtoolbox.run('shutdown.exe /f /r /t 0')"class="ico"style="background:url(../icon/23.png)"></button></td>
+<td><button onclick="hyxtoolbox.run('shutdown /f /r /t 0')"class="ico"style="background:url(../icon/23.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>定时重启</p></td>
-<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;set /p t=Reboot in seconds: &amp; shutdown /r /t %t%&quot;')"class="ico"style="background:url(../icon/23.png)"></button></td>
+<td><button onclick="hyxtoolbox.run('cmd /k &quot;set /p t=Reboot in seconds: &amp; shutdown /r /t %t%&quot;')"class="ico"style="background:url(../icon/23.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>注销</p></td>
-<td><button onclick="hyxtoolbox.run('shutdown.exe /f /l')"class="ico"style="background:url(../icon/24.png)"></button></td>
+<td><button onclick="hyxtoolbox.run('shutdown /f /l')"class="ico"style="background:url(../icon/24.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>进入BIOS设置</p></td>
-<td><button onclick="hyxtoolbox.run('shutdown.exe /r /fw /t 0')" style="border:none;height:32px;width:37px;background:url(../icon/65.png)"></button></td>
+<td><button onclick="hyxtoolbox.run('shutdown /r /fw /t 0')" style="border:none;height:32px;width:37px;background:url(../icon/65.png)"></button></td>
 </tr>
 </table>
 <table>

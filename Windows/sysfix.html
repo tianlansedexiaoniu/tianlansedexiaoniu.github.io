@@ -17,7 +17,7 @@
 <table>
 <tr>
 <td><p>重启explorer.exe</p></td>
-<td><button onclick="hyxtoolbox.run('taskkill /f /im explorer.exe &amp;&amp; start explorer.exe')">重启</button></td>
+<td><button onclick="hyxtoolbox.run('cmd /c &quot;taskkill /f /im explorer.exe &amp;&amp; start explorer.exe&quot;')">重启</button></td>
 </tr>
 </table>
 <table>
@@ -35,31 +35,31 @@
 <table>
 <tr>
 <td><p>修复BIOS启动文件</p></td>
-<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;bootrec /fixmbr &amp; bootrec /fixboot &amp; bootrec /scanos &amp; bootrec /rebuildbcd&quot;')">修复</button></td>
+<td><button onclick="hyxtoolbox.run('cmd /k &quot;bootrec /fixmbr &amp; bootrec /fixboot &amp; bootrec /scanos &amp; bootrec /rebuildbcd&quot;')">修复</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>修复UEFI启动文件</p></td>
-<td><button onclick="hyxtoolbox.run('start cmd.exe /k bcdboot C:\\Windows /l zh-cn')">修复</button></td>
+<td><button onclick="hyxtoolbox.run('cmd /k &quot;bcdboot C:\\Windows /l zh-cn&quot;')">修复</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>扫描垃圾</p></td>
-<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;dir /s /b C:\\*.tmp C:\\*.log C:\\*.old C:\\*.bak 2&gt;nul&quot;')">扫描</button></td>
+<td><button onclick="hyxtoolbox.run('cmd /k &quot;dir /s /b C:\\*.tmp C:\\*.log C:\\*.old C:\\*.bak 2>nul&quot;')">扫描</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>清理垃圾</p></td>
-<td><button onclick="hyxtoolbox.run('del /f /s /q C:\\*.tmp C:\\*.log C:\\*.old C:\\*.bak')">清理</button></td>
+<td><button onclick="hyxtoolbox.run('cmd /c &quot;del /f /s /q C:\\*.tmp C:\\*.log C:\\*.old C:\\*.bak&quot;')">清理</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>修改系统属性</p></td>
-<td><button onclick="hyxtoolbox.run('start sysdm.cpl')">修改</button></td>
+<td><button onclick="hyxtoolbox.run('sysdm.cpl')">修改</button></td>
 </tr>
 </table>
 </body>

