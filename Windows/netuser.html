@@ -5,6 +5,7 @@
 <title>高级账号设置</title>
 <link rel="icon" href="../img/hyx.ico" type="image/x-icon">
 <link rel="stylesheet" href="../css/close.css">
+<script src="../css/hyxtoolbox.js"></script>
 </head>
 <body>
 <table align="right">
@@ -16,31 +17,31 @@
 <table align="right">
 <tr>
 <td><p>修改密码(需要管理员权限)</p></td>
-<td><a href="9://"><button style="border:none;height:32px;width:32px;background: url(../icon/50.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;set /p p=New password: &amp; net user %username% %p%&quot;')"class="ico"style="background:url(../icon/50.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>新建账户(需要管理员权限)</p></td>
-<td><a href="10://"><button style="border:none;height:32px;width:32px;background: url(../icon/51.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;set /p u=User name: &amp; set /p p=Password: &amp; net user %u% %p% /add&quot;')"class="ico"style="background:url(../icon/51.png)"></button></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>删除账户(需要管理员权限)</p></td>
-<td><a href="11://"><button style="border:none;height:32px;width:32px;background: url(../icon/52.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;set /p u=User name to delete: &amp; net user %u% /del&quot;')"class="ico"style="background:url(../icon/52.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>清空密码(需要管理员权限)</p></td>
-<td><a href="12://"><button style="border:none;height:32px;width:32px;background: url(../icon/53.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start cmd.exe /k net user %username% &quot;&quot;')"class="ico"style="background:url(../icon/53.png)"></button></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>注销账户</p></td>
-<td><a href="13://"><button style="border:none;height:32px;width:32px;background: url(../icon/54.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('shutdown.exe /f /l')"class="ico"style="background:url(../icon/54.png)"></button></td>
 </tr>
 </table>
 </body>

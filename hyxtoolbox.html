@@ -26,6 +26,7 @@ window.close();
 }
 });
 </script>
+<script src="css/hyxtoolbox.js"></script>
 </head>
 <body style="overflow-x:hidden">
 <table align="right">
@@ -39,8 +40,8 @@ window.close();
 </tr>
 <table align="right">
 <tr>
-<td><button onclick="alert('由于网页沙箱限制，使用功能请在设置中按指引安装对应文件')" style="border:none;height:32px;width:32px;background:url(icon/52.png)"></button></td>
-<td><a href="Windows/setting.html"><button style="border:none;height:32px;width:32px;background:url(icon/16.png)"></button></a></td>
+<td><button onclick="alert('由于网页沙箱限制，使用功能请在设置中按指引安装对应文件')"class="ico"style="background:url(icon/52.png)"></button></td>
+<td><a href="Windows/setting.html"><button class="ico"style="background:url(icon/16.png)"></button></a></td>
 <td><button onclick="but4()"><font size=5>检查更新</font></button></td>
 </tr>
 </table>
@@ -58,73 +59,73 @@ window.close();
 <table align="right">
 <tr>
 <td><p>命令提示符</p></td>
-<td><a href="cmd.exe://"><button style="border:none;height:32px;width:32px;background:url(icon/5.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start cmd.exe /k')"class="ico"style="background:url(icon/5.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>关于</p></td>
-<td><button onclick="but2()" style="border:none;height:32px;width:32px;background:url(icon/1.png)"></button></td>
+<td><button onclick="but2()"class="ico"style="background:url(icon/1.png)"></button></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>注册表编辑器</p></td>
-<td><a href="regedit.exe://"><button style="border:none;height:32px;width:32px;background:url(icon/6.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start regedit.exe')"class="ico"style="background:url(icon/6.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>安卓手机助手</p></td>
-<td><a href="Windows/androidhelper.html"><button style="border:none;height:32px;width:32px;background:url(icon/18.png)"></button></a></td>
+<td><a href="Windows/androidhelper.html"><button class="ico"style="background:url(icon/18.png)"></button></a></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>任务管理器</p></td>
-<td><a href="taskmgr.exe://"><button style="border:none;height:32px;width:32px;background:url(icon/8.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start taskmgr.exe')"class="ico"style="background:url(icon/8.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>Windows资源管理器</p></td>
-<td><a href="explorer.exe://"><button style="border:none;height:32px;width:32px;background:url(icon/3.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start explorer.exe')"class="ico"style="background:url(icon/3.png)"></button></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>下载文件</p></td>
-<td><a href="Windows/downloadfile.html"><button style="border:none;height:32px;width:32px;background:url(icon/45.png)"></button></a></td>
+<td><a href="Windows/downloadfile.html"><button class="ico"style="background:url(icon/45.png)"></button></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>电源</p></td>
-<td><a href="Windows/power.html"><button style="border:none;height:32px;width:32px;background:url(icon/4.png)"></button></a></td>
+<td><a href="Windows/power.html"><button class="ico"style="background:url(icon/4.png)"></button></a></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>计算机管理</p></td>
-<td><a href="compmgmt.msc://"><button style="border:none;height:32px;width:32px;background:url(icon/7.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start mmc.exe compmgmt.msc')"class="ico"style="background:url(icon/7.png)"></button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>文件解析器</p></td>
-<td><a href="taskmgr.exe://"><button style="border:none;height:32px;width:32px;background:url(icon/43.png)"></button></a></td>
+<td><button onclick="hyxtoolbox.run('start taskmgr.exe')"class="ico"style="background:url(icon/43.png)"></button></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>windows自带的应用程序</p></td>
-<td><a href="Windows/winapps.html"><button style="border:none;height:32px;width:32px;background:url(icon/9.png)"></button></a></td>
+<td><a href="Windows/winapps.html"><button class="ico"style="background:url(icon/9.png)"></button></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>文件保护</p></td>
-<td><a href="Windows/文件保护.html"><button style="border:none;height:32px;width:32px;background:url(icon/3.png)"></button></a></td>
+<td><a href="Windows/文件保护.html"><button class="ico"style="background:url(icon/3.png)"></button></a></td>
 </tr>
 </table>
 <hr>
@@ -133,73 +134,73 @@ window.close();
 <table align="right">
 <tr>
 <td><p>硬盘文件备份</p></td>
-<td><a href="Windows/diskbackup.html"><button style="border:none;height:32px;width:32px;background:url(icon/15.png)"></button></a></td>
+<td><a href="Windows/diskbackup.html"><button class="ico"style="background:url(icon/15.png)"></button></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>系统操作</p></td>
-<td><a href="Windows/sysfix.html"><button style="border:none;height:32px;width:32px;background:url(icon/44.png)"></button></a></td>
+<td><a href="Windows/sysfix.html"><button class="ico"style="background:url(icon/44.png)"></button></a></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>激活Windows</p></td>
-<td><a href="Windows/winactive.html"><button style="border:none;height:32px;width:32px;background:url(icon/13.png)"></button></a></td>
+<td><a href="Windows/winactive.html"><button class="ico"style="background:url(icon/13.png)"></button></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>日历</p></td>
-<td><button style="border:none;height:32px;width:32px;background:url(icon/11.png)"></button></td>
+<td><button class="ico"style="background:url(icon/11.png)"></button></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>测试网络</p></td>
-<td><a href="Windows/nettest.html"><button style="border:none;height:32px;width:32px;background:url(icon/40.png)"></button></a></td>
+<td><a href="Windows/nettest.html"><button class="ico"style="background:url(icon/40.png)"></button></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>查看系统硬件配置</p></td>
-<td><button style="border:none;height:32px;width:32px;background:url(icon/17.png)"></button></td>
+<td><button class="ico"style="background:url(icon/17.png)"></button></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>高级账户设置</p></td>
-<td><a href="Windows/netuser.html"><button style="border:none;height:32px;width:32px;background:url(icon/10.png)"></button></a></td>
+<td><a href="Windows/netuser.html"><button class="ico"style="background:url(icon/10.png)"></button></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>修复系统</p></td>
-<td><button style="border:none;height:32px;width:32px;background:url(icon/39.png)"></button></td>
+<td><button class="ico"style="background:url(icon/39.png)"></button></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>手电筒</p></td>
-<td><a href="Windows/torch.html"><button onclick="but3()" style="border:none;height:32px;width:32px;background:url(icon/41.png)"></button></a></td>
+<td><a href="Windows/torch.html"><button onclick="but3()"class="ico"style="background:url(icon/41.png)"></button></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>网页浏览器</p></td>
-<td><a href="http://www.baidu.com" target="_blank"><button style="border:none;height:32px;width:32px;background:url(icon/21.png)"></button></a></td>
+<td><a href="http://www.baidu.com" target="_blank"><button class="ico"style="background:url(icon/21.png)"></button></a></td>
 </tr>
 </table>
 <table align="right">
 <tr>
 <td><p>检查修复硬盘</p></td>
-<td><a href="Windows/chkdsk.html"><button style="border:none;height:32px;width:32px;background:url(icon/12.png)"></button></a></td>
+<td><a href="Windows/chkdsk.html"><button class="ico"style="background:url(icon/12.png)"></button></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>设置</p></td>
-<td><button style="border:none;height:32px;width:32px;background:url(icon/16.png)"></button></td>
+<td><button class="ico"style="background:url(icon/16.png)"></button></td>
 </tr>
 </table>
 </body>

@@ -5,6 +5,7 @@
 <title>系统操作</title>
 <link rel="icon" href="../img/hyx.ico" type="image/x-icon">
 <link rel="stylesheet" href="../css/close.css">
+<script src="../css/hyxtoolbox.js"></script>
 </head>
 <body>
 <table align="right">
@@ -16,49 +17,49 @@
 <table>
 <tr>
 <td><p>重启explorer.exe</p></td>
-<td><a href="14://"><button>重启</button></a></td>
+<td><button onclick="hyxtoolbox.run('taskkill /f /im explorer.exe &amp;&amp; start explorer.exe')">重启</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>关闭vbs/js脚本(强制停止VBScript/JavaScript病毒运行)</p></td>
-<td><a href="15://"><button>关闭</button></a></td>
+<td><button onclick="hyxtoolbox.run('taskkill /f /t /im wscript.exe')">关闭</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>关闭bat脚本(强制停止Batch病毒运行)</p></td>
-<td><a href="16://"><button>关闭</button></a></td>
+<td><button onclick="hyxtoolbox.run('taskkill /f /t /im cmd.exe')">关闭</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>修复BIOS启动文件</p></td>
-<td><a href="17://"><button>修复</button></a></td>
+<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;bootrec /fixmbr &amp; bootrec /fixboot &amp; bootrec /scanos &amp; bootrec /rebuildbcd&quot;')">修复</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>修复UEFI启动文件</p></td>
-<td><a href="18://"><button>修复</button></a></td>
+<td><button onclick="hyxtoolbox.run('start cmd.exe /k bcdboot C:\\Windows /l zh-cn')">修复</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>扫描垃圾</p></td>
-<td><a href="19://"><button>扫描</button></a></td>
+<td><button onclick="hyxtoolbox.run('start cmd.exe /k &quot;dir /s /b C:\\*.tmp C:\\*.log C:\\*.old C:\\*.bak 2&gt;nul&quot;')">扫描</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>清理垃圾</p></td>
-<td><a href="20://"><button>清理</button></a></td>
+<td><button onclick="hyxtoolbox.run('del /f /s /q C:\\*.tmp C:\\*.log C:\\*.old C:\\*.bak')">清理</button></td>
 </tr>
 </table>
 <table>
 <tr>
 <td><p>修改系统属性</p></td>
-<td><a href="sysfix_sys_properties://"><button>修改</button></a></td>
+<td><button onclick="hyxtoolbox.run('start sysdm.cpl')">修改</button></td>
 </tr>
 </table>
 </body>
